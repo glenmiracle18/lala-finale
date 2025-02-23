@@ -1,10 +1,10 @@
 "use client"
 import { useQuery } from "@tanstack/react-query"
 import { Skeleton } from "@/components/ui/skeleton"
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import { Alert, AlertDescription, AlertTitle } from "../../components/ui/alert"
 import { AlertCircle } from "lucide-react"
 import { getAllPropeties } from "../(actions)/listing"
-import { PropertyCard } from "@/components/property-card"
+import { PropertyCard } from "../../components/property-card"
 
 const Listings = () => {
   const {
