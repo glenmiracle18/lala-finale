@@ -1,10 +1,10 @@
 // actions/listing.ts
 "use server"
 
-import prisma from "@/lib/prisma";
-import { BookingTypes, formDataTypes, PropertyTypes } from "@/types";
+import { BookingTypes, formDataTypes, PropertyTypes } from "../../types";
 import { auth } from "@clerk/nextjs/server";
 import { revalidatePath } from "next/cache";
+import prisma from "../../lib/prisma";
 
 export async function createListing(data: formDataTypes) {
   if (!data) {
@@ -140,7 +140,7 @@ export async function updateProperty(data: PropertyTypes & { id: string }): Prom
         images: {
           deleteMany: {},
           createMany: {
-            data: images.map(image => ({ url: image.url }))
+            data: images.map((image: { url: string }) => ({ url: image.url }))
           }
         }
       },

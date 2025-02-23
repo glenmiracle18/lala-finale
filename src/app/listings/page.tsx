@@ -1,10 +1,10 @@
 "use client"
 import { useQuery } from "@tanstack/react-query"
-import { Skeleton } from "@/components/ui/skeleton"
 import { Alert, AlertDescription, AlertTitle } from "../../components/ui/alert"
 import { AlertCircle } from "lucide-react"
 import { getAllPropeties } from "../(actions)/listing"
 import { PropertyCard } from "../../components/property-card"
+import { Skeleton } from "../../components/ui/skeleton"
 
 const Listings = () => {
   const {
@@ -46,7 +46,7 @@ const Listings = () => {
       <h1 className="text-3xl font-bold mb-6 font-mono">Properties</h1>
       {properties?.data && properties.data.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {properties.data.map((property) => (
+          {properties.data.map((property: any) => (
             <PropertyCard key={property.id} property={property} />
           ))}
         </div>

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
-import { SidebarProvider } from "@/components/ui/sidebar"
 import { cookies } from "next/headers";
-import Header from "@/components/header";
+import { SidebarProvider } from "../../components/ui/sidebar";
+import Header from "../../components/header";
 
 export const metadata: Metadata = {
   title: "Dashboard",

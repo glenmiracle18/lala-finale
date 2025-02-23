@@ -2,14 +2,14 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
 import {
   SignedIn,
   SignedOut,
   UserButton,
   useUser,
 } from "@clerk/nextjs";
+import { cn } from "../lib/utils";
+import { buttonVariants } from "../components/ui/button";
 
 
 function ElegantShape({

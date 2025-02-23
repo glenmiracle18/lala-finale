@@ -5,9 +5,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import {  buttonVariants } from "@/components/ui/button";
+} from "../components/ui/card";
+import { Badge } from "../components/ui/badge";
+import {  buttonVariants } from "../components/ui/button";
 import { Bed, Bath, Clock } from "lucide-react";
 import Link from "next/link";
 
